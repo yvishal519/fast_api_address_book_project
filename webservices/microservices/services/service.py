@@ -4,10 +4,11 @@ from webservices.utilities.logger_utils import logger
 from webservices.microservices.model.model import Address, AddressOut, AddressListOut, LocationParams
 from webservices.microservices.handler.handler import AddressHandler
 from webservices.utilities.sql_lite_dbutils import ConnectionPool
+from webservices.configs.app_configurations import *
 
 # Create an instance of AddressHandler for reuse
-address_handler = AddressHandler(db_file='address_book.db')
-connection_pool = ConnectionPool(max_connections=5)  # Create a connection pool
+address_handler = AddressHandler(db_file=DB_FILE)
+connection_pool = ConnectionPool(max_connections=MAX_CONNECTION)  # Create a connection pool
 
 address_router = APIRouter()
 

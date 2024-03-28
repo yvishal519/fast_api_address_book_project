@@ -1,6 +1,7 @@
 import sqlite3
 import threading
 from queue import Queue
+from webservices.configs.app_constants import *
 
 
 class ConnectionPool:
@@ -29,14 +30,7 @@ def create_tables_if_not_exist(db_file):
     conn = sqlite3.connect(db_file)
     try:
         c = conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS addresses
-                     (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                     street_address TEXT,
-                     city TEXT,
-                     state TEXT,
-                     postal_code TEXT,
-                     latitude REAL,
-                     longitude REAL)''')
+        c.execute(CREATE_TBL_QUERY.format(table_name=Tables.ADDRESSES_TBL))
         conn.commit()
     except Exception as e:
         print("Error occurred while creating tables")
