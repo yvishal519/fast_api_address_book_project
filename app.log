@@ -1,0 +1,126 @@
+2024-03-29 02:14:26,905 - webservices.utilities.logger_utils - INFO - welcome to the Application
+2024-03-29 02:14:29,387 - webservices.utilities.logger_utils - INFO - welcome to the Application
+2024-03-29 02:23:16,329 - webservices.utilities.logger_utils - INFO - Compliance calculation successful
+2024-03-29 02:38:18,511 - webservices.utilities.logger_utils - ERROR - [{'type': 'json_invalid', 'loc': ('body', 37), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting value'}}]
+2024-03-29 02:38:29,006 - webservices.utilities.logger_utils - ERROR - [{'type': 'json_invalid', 'loc': ('body', 36), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting value'}}]
+2024-03-29 02:42:53,388 - webservices.utilities.logger_utils - ERROR - [{'type': 'json_invalid', 'loc': ('body', 37), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting value'}}]
+2024-03-29 03:49:44,963 - webservices.utilities.logger_utils - ERROR - Error occurred while creating the address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 24, in create_address
+    c.execute(
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9928 and this is thread id 10212.
+2024-03-29 03:49:44,967 - webservices.utilities.logger_utils - ERROR - Error occurred while creating an address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 24, in create_address
+    c.execute(
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9928 and this is thread id 10212.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 17, in create_address
+    result = address_handler.create_address(request_body)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 33, in create_address
+    raise HTTPException(status_code=500, detail="Failed to create the address")
+fastapi.exceptions.HTTPException: 500: Failed to create the address
+2024-03-29 03:52:06,819 - webservices.utilities.logger_utils - ERROR - Error occurred while creating the address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 28, in create_address
+    c.execute(
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9720 and this is thread id 17424.
+2024-03-29 03:52:06,821 - webservices.utilities.logger_utils - ERROR - Error occurred while creating an address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 28, in create_address
+    c.execute(
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9720 and this is thread id 17424.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 17, in create_address
+    result = address_handler.create_address(request_body)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 37, in create_address
+    raise HTTPException(status_code=500, detail="Failed to create the address")
+fastapi.exceptions.HTTPException: 500: Failed to create the address
+2024-03-29 03:52:54,413 - webservices.utilities.logger_utils - ERROR - Error occurred while creating the address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c.execute(
+NameError: name 'c' is not defined
+2024-03-29 03:52:54,416 - webservices.utilities.logger_utils - ERROR - Error occurred while creating an address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c.execute(
+NameError: name 'c' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 17, in create_address
+    result = address_handler.create_address(request_body)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 35, in create_address
+    raise HTTPException(status_code=500, detail="Failed to create the address")
+fastapi.exceptions.HTTPException: 500: Failed to create the address
+2024-03-29 03:54:17,960 - webservices.utilities.logger_utils - ERROR - Error occurred while creating the address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c = self.conn.cursor()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22032 and this is thread id 6792.
+2024-03-29 03:54:17,963 - webservices.utilities.logger_utils - ERROR - Error occurred while creating an address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c = self.conn.cursor()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22032 and this is thread id 6792.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 35, in create_address
+    raise HTTPException(status_code=500, detail="Failed to create the address")
+fastapi.exceptions.HTTPException: 500: Failed to create the address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 17, in create_address
+    result = address_handler.create_address(request_body)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 37, in create_address
+    self._close_connection()
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 71, in _close_connection
+    self.conn.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22032 and this is thread id 6792.
+2024-03-29 03:54:46,547 - webservices.utilities.logger_utils - ERROR - Error occurred while creating the address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c = self.conn.cursor()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 20296 and this is thread id 14656.
+2024-03-29 03:54:46,548 - webservices.utilities.logger_utils - ERROR - Error occurred while creating an address
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 26, in create_address
+    c = self.conn.cursor()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 20296 and this is thread id 14656.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 35, in create_address
+    raise HTTPException(status_code=500, detail="Failed to create the address")
+fastapi.exceptions.HTTPException: 500: Failed to create the address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 17, in create_address
+    result = address_handler.create_address(request_body)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 37, in create_address
+    self._close_connection()
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 71, in _close_connection
+    self.conn.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 20296 and this is thread id 14656.
+2024-03-29 04:41:06,775 - webservices.utilities.logger_utils - ERROR - Error occurred while retrieving addresses within distance
+Traceback (most recent call last):
+  File "D:\pythonTest\webservices\microservices\services\service.py", line 63, in get_addresses_within_distance_api
+    result = address_handler.get_addresses_within_distance(location_params.latitude, location_params.longitude, location_params.distance)
+  File "D:\pythonTest\webservices\microservices\handler\handler.py", line 94, in get_addresses_within_distance
+    if distance.distance(user_location, address_location).miles <= distance:
+AttributeError: 'float' object has no attribute 'distance'
